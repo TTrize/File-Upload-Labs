@@ -1,9 +1,9 @@
 # File-Upload-Labs
 
-3 Laboratórios vulneraveis a File Upload, separados em Low, Medium e Hard.
-a primeira é uma página completamente vulnerável
-o segundo tem uma falha de nível médio com uma White List de arquivos
-o terceiro tem uma Black List de execução de arquivo php e MIME Type verificado.
+3 Laboratórios vulneraveis a File Upload, separados em Low, Medium e Hard.<br />
+a primeira é uma página completamente vulnerável.<br />
+o segundo tem uma falha de nível médio com uma White List de arquivos.<br />
+o terceiro tem uma Black List de execução de arquivo php e MIME Type verificado.<br />
 
 # How configure Docker
 ## Instalação do Docker
