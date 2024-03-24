@@ -1,6 +1,6 @@
 # File-Upload-Labs
 
-3 Laboratórios vulneraveis a File Upload, separados em Low, Medium e Hard.<br />
+3 Laboratórios vulneráveis a File Upload, separados em Low, Medium e Hard.<br />
 A primeira é uma página completamente vulnerável.<br />
 O segundo tem uma falha de nível médio com uma White List de arquivos.<br />
 O terceiro tem uma Black List de execução de arquivo php e MIME Type verificado.<br />
@@ -9,7 +9,7 @@ O terceiro tem uma Black List de execução de arquivo php e MIME Type verificad
 ## Instalação do Docker
 `sudo apt install docker.io docker-compose`
 
-OBS: em caso de falta de depencia de arquivos execute:
+OBS: em caso de falta de dependência de arquivos, execute:
 `sudo apt install -f`
 
 ## Documentação docker-compose.yaml
@@ -27,7 +27,7 @@ O docker-compose possuí a configuração de um servidor LAMP(Linux, Apache, Mys
 -`networks:`<br />
 -`- app-network`<br />
 
-O serviço **web** constroi a imagem web pela chamada do arquivo Dockerfile inserida no `context: .` referênciado pelo diretório local.
+O serviço **web** constroi a imagem web pela chamada do arquivo Dockerfile inserida no `context: .` referênciado pelo diretório local.<br />
 Seguindo do `ports: 80:80` sendo ela a referência da página web do localhost, junto com a montagem do volume site com o diretório /var/www/html.
 
 **2. mysql**
@@ -45,25 +45,25 @@ Seguindo do `ports: 80:80` sendo ela a referência da página web do localhost, 
     -`networks:`<br />
     -`  - app-network`<br />
   
-O serviço **mysql** executa a imagem na versão 8.0 do banco de dados.
-O enviroment é uma variavel que constroi o ambiente do banco de dados informando senha, database, usuário e senha de usuário, pré definidos na instalação.
-Configurando a porta de banco 3306 do localhost, juntamente configurando o ambiente do diretório /var/lib/mysql no volume `data`
+O serviço **mysql** executa a imagem na versão 8.0 do banco de dados.<br />
+O enviroment é uma variavel que constroi o ambiente do banco de dados informando senha, database, usuário e senha de usuário, pré definidos na instalação.<br />
+Configurando a porta de banco 3306 do localhost, juntamente configurando o ambiente do diretório /var/lib/mysql no volume `data`.<br />
 
   **3. networks**
   `networks:`<br />
   `  app-network:`<br />
   `    driver: bridge`<br />
   
-O serviço **networks** configura as interfaces de rede em modo bridge criando redes virtuais para cada serviço no docker, elas são referênciadas na interface de rede local.
+O serviço **networks** configura as interfaces de rede em modo bridge criando redes virtuais para cada serviço no docker, elas são referênciadas na interface de rede local.<br />
 
 ## Incialização do Docker
-1. Crie uma pasta no diretório onde sera configurada o docker
-2. Insira os arquivos docker-compose.yaml e Dockerfile na pasta criada
-3. Bash execute o comando `docker-compose up -d` no diretório do docker
+1. Crie uma pasta no diretório onde sera configurada o docker<br />
+2. Insira os arquivos docker-compose.yaml e Dockerfile na pasta criada<br />
+3. Bash execute o comando `docker-compose up -d` no diretório do docker<br />
 
 **Replique o conteúdo do arquivo site do repositório no arquivo criado pelo docker**
 
-Pronto o docker está configurado, acesse no navegador:
+Pronto o docker está configurado, acesse no navegador:<br />
 `http://localhost/`
 
 
