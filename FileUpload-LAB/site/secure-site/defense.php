@@ -25,6 +25,8 @@ if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
         die();
     } else{
         move_uploaded_file($_FILES['file']['tmp_name'], $uploadPath);
+        http_response_code(200);
+        echo $uploadPath;
     }
 } else{
 // if exist error send request 500 to file incorrect
