@@ -5,7 +5,7 @@ A primeira é uma página completamente vulnerável.<br />
 O segundo tem uma falha de nível médio com uma White List de arquivos.<br />
 O terceiro tem uma Black List de execução de arquivo php e MIME Type verificado.<br />
 
-# How configure Docker
+# Como configurar o Docker?
 ## Instalação do Docker
 `sudo apt install docker.io docker-compose`
 
