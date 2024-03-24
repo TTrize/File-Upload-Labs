@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - ./site:/var/www/html
+    networks:
+      - app-network
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: P@ssw0rd!123
+      MYSQL_DATABASE: mysql
+      MYSQL_USER: kali
+      MYSQL_PASSWORD: k@l!
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data:/var/lib/mysql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

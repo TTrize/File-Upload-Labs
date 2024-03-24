@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fantasy Blog</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="logo">Fantasy</div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="container">
+        <div class="post-form">
+            <h2>Add New Post</h2>
+            <input type="text" placeholder="Title">
+            <textarea placeholder="Content" rows="5"></textarea>
+            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+            <label for="fileInput" id="fileInputLabel" class="fileInputLabel">Drag & Drop or Click to Upload Image</label><br>
+			<button onclick="submitPost()">Submit</button>
+        </div>
+        <div class="posts">
+            <!-- Posts will be dynamically added here -->
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>click home to back </p>
+    <div class="container">
+        <p>&copy; 2024 Fantasy Blog. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="secure.js"></script>
+</body>
+</html>

