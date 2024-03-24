@@ -16,7 +16,7 @@ OBS: em caso de falta de depencia de arquivos execute:
 O docker-compose possuí a configuração de um servidor LAMP(Linux, Apache, Mysql e PHP), nele temos os seguintes serviços:
 
 **1. web**
--`web:`
+-`web:`<br />
 -`build:`
 -`context: .`
 -`dockerfile: Dockerfile`
