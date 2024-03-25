@@ -66,4 +66,16 @@ O serviço **networks** configura as interfaces de rede em modo bridge criando r
 Pronto o docker está configurado, acesse no navegador:<br />
 `http://localhost/`
 
+## Imagens do laboratório
 
+**Home:**
+![home](https://github.com/TTrize/File-Upload-Labs/assets/113475439/de27f8bf-bf3a-4d48-abf1-c6560ca61a99)
+
+**Vulnerable**
+![low](https://github.com/TTrize/File-Upload-Labs/assets/113475439/252a8b0e-2528-455f-8cf5-14374d7c1631)
+
+**Medium**
+![medium](https://github.com/TTrize/File-Upload-Labs/assets/113475439/11880547-54fc-4d0a-bcfb-a4f10050fea2)
+
+**Hard(Safe)**
+![hard](https://github.com/TTrize/File-Upload-Labs/assets/113475439/84c708a0-065d-4cac-86a3-28b712b2170e)
