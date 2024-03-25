@@ -6,10 +6,10 @@ if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
     $fileName = basename($_FILES['file']['name']);
      // Complete filename
     $uploadPath = $uploadDir . $fileName;
-    // whitelist test
+    //allowlist
     if (!preg_match('/^.*\.(jpg|jpeg|png|gif)$/', $fileName)) {
             http_response_code(500);
-            echo 'texto';
+            echo "Somente imagens permitidas"
             die();
     }
     // move temp file to destination file and verified
