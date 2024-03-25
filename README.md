@@ -77,8 +77,8 @@ Lembrete: Quando reiniciado o docker o ip de referência é alterado.<br />
 
 ## Imagens do laboratório
 
-**Home:**
-![home](https://github.com/TTrize/File-Upload-Labs/assets/113475439/de27f8bf-bf3a-4d48-abf1-c6560ca61a99)
+**Home**
+![home](https://github.com/TTrize/File-Upload-Labs/assets/113475439/bace321d-9872-4022-abf0-da60db7ff41f)
 
 **Vulnerable**
 ![low](https://github.com/TTrize/File-Upload-Labs/assets/113475439/252a8b0e-2528-455f-8cf5-14374d7c1631)
