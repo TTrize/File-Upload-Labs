@@ -66,6 +66,15 @@ O serviço **networks** configura as interfaces de rede em modo bridge criando r
 Pronto o docker está configurado, acesse no navegador:<br />
 `http://localhost/`
 
+## PLUS
+**Configurar hostname da maquina local**
+No diretório do docker já configurado execute `docker ps`<br />
+Nele irá aparecer os id's de container do docker, acesse o container web executando `docker exec -it id-do-container bash`<br />
+Dentro do container execute `cat /etc/hosts` na ultima linha haverá o ip de referência da bridge do container<br />
+No seu sistema execute `sudo nano /etc/hosts` e insira o ip do container e uma url de referência (Exemplo:172.24.0.4   fantasy-blog.local)<br />
+Salve o arquivo e acesse a url `http://fantasy-blog.local`<br />
+Lembrete: Quando reiniciado o docker o ip de referência é alterado.<br />
+
 ## Imagens do laboratório
 
 **Home:**
