@@ -27,7 +27,7 @@ O docker-compose possuí a configuração de um servidor LAMP(Linux, Apache, Mys
 -`networks:`<br />
 -`- app-network`<br />
 
-O serviço **web** constroi a imagem web pela chamada do arquivo Dockerfile inserida no `context: .` referênciado pelo diretório local.<br />
+O serviço **web** constroi a imagem web(Ubuntu) pela chamada do arquivo Dockerfile inserida no `context: .` referênciado pelo diretório local.<br />
 Seguindo do `ports: 80:80` sendo ela a referência da página web do localhost, junto com a montagem do volume site com o diretório /var/www/html.
 
 **2. mysql**
