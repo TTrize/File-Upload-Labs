@@ -5,12 +5,12 @@ if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
     $uploadDir = 'uploadsec/';
     $fileName = uniqid() . "_" . $_FILES["file"]["name"];
 // Complete filename
-// blacklist
+//denylist
 	if (preg_match('/^.+\.ph(p|ps|tml)/', $fileName)) {
         http_response_code(500);
         die();
     }	
-// whitelist test
+//allowlist
     if (!preg_match('/^.*\.(jpg|jpeg|png|gif)$/', $fileName)) {
         http_response_code(500);
         die();
