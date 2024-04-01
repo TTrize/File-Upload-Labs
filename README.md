@@ -64,15 +64,15 @@ O serviço **networks** configura as interfaces de rede em modo bridge criando r
 **Replique o conteúdo do arquivo site do repositório no arquivo criado pelo docker**
 
 ## Configuração do apache2.conf
-1.No terminal execute o comando `docker ps` e copie o valor do container ID
-2.Execute o comando `docker exec -it "id do container" bash`
-3.Dentro do container edite o arquivo apache2.conf `vim /etc/apache2/apache2.conf`
-4.Adicione abaixo do campo FilesMatch, o regex de config do php para o lab.
-`<FilesMatch "\.(php\.jpeg|php\.jpg|php\.png|php\.gif)$">
-    SetHandler application/x-httpd-php
-</FilesMatch>`
-5.Salve o arquivo e restarte o apache `service apache2 restart`
-6.No seu terminal execute o comando `docker-compose up -d`
+1.No terminal execute o comando `docker ps` e copie o valor do container ID<br />
+2.Execute o comando `docker exec -it "id do container" bash`<br />
+3.Dentro do container edite o arquivo apache2.conf `vim /etc/apache2/apache2.conf`<br />
+4.Adicione abaixo do campo FilesMatch, o regex de config do php para o lab.<br />
+`<FilesMatch "\.(php\.jpeg|php\.jpg|php\.png|php\.gif)$"><br />
+    SetHandler application/x-httpd-php<br />
+</FilesMatch>`<br />
+5.Salve o arquivo e restarte o apache `service apache2 restart`<br />
+6.No seu terminal execute o comando `docker-compose up -d`<br />
 
 Pronto o docker está configurado, acesse no navegador:<br />
 `http://localhost/`
