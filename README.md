@@ -71,6 +71,9 @@ O serviço **networks** configura as interfaces de rede em modo bridge criando r
 `<FilesMatch "\.(php\.jpeg|php\.jpg|php\.png|php\.gif)$">`<br />
     `SetHandler application/x-httpd-php`<br />
 `</FilesMatch>`<br />
+`<FilesMatch "\.(phar\.jpeg|phar\.jpg|phar\.png|phar\.gif)$">`<br />
+        `SetHandler application/x-httpd-php<br />`
+`</FilesMatch>`<br />
 5.Salve o arquivo e restarte o apache `service apache2 restart`<br />
 6.No seu terminal execute o comando `docker-compose up -d`<br />
 
