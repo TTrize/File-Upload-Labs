@@ -15,7 +15,7 @@ OBS: em caso de falta de dependência de arquivos, execute:
 ## Documentação docker-compose.yaml
 O docker-compose possuí a configuração de um servidor LAMP(Linux, Apache, Mysql e PHP), nele temos os seguintes serviços:
 
-**1. web**
+**1. web**<br />
   `web:`<br />
     `build:`<br />
       `context: .`<br />
@@ -30,7 +30,7 @@ O docker-compose possuí a configuração de um servidor LAMP(Linux, Apache, Mys
 O serviço **web** constroi a imagem web(Ubuntu) pela chamada do arquivo Dockerfile inserida no `context: .` referênciado pelo diretório local.<br />
 Seguindo do `ports: 80:80` sendo ela a referência da página web do localhost, junto com a montagem do volume site com o diretório /var/www/html.
 
-**2. mysql**
+**2. mysql**<br />
   `mysql:`<br />
     `image: mysql:8.0`<br />
     `environment:`<br />
@@ -49,7 +49,7 @@ O serviço **mysql** executa a imagem na versão 8.0 do banco de dados.<br />
 O enviroment é uma variavel que constroi o ambiente do banco de dados informando senha, database, usuário e senha de usuário, pré definidos na instalação.<br />
 Configurando a porta de banco 3306 do localhost, juntamente configurando o ambiente do diretório /var/lib/mysql no volume `data`.<br />
 
-  **3. networks**
+  **3. networks**<br />
   `networks:`<br />
   `  app-network:`<br />
   `    driver: bridge`<br />
