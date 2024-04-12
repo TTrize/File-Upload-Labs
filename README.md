@@ -16,34 +16,34 @@ OBS: em caso de falta de dependência de arquivos, execute:
 O docker-compose possuí a configuração de um servidor LAMP(Linux, Apache, Mysql e PHP), nele temos os seguintes serviços:
 
 **1. web**
--`web:`<br />
--`build:`<br />
--`context: .`<br />
--`dockerfile: Dockerfile`<br />
--`ports:`<br />
--`      - "80:80"`<br />
--`volumes:`<br />
--`      - ./site:/var/www/html`<br />
--`networks:`<br />
--`- app-network`<br />
+  `web:`<br />
+    `build:`<br />
+      `context: .`<br />
+      `dockerfile: Dockerfile`<br />
+    `ports:`<br />
+    `  - "80:80"`<br />
+    `volumes:`<br />
+    `  - ./site:/var/www/html`<br />
+    `networks:`<br />
+      `- app-network`<br />
 
 O serviço **web** constroi a imagem web(Ubuntu) pela chamada do arquivo Dockerfile inserida no `context: .` referênciado pelo diretório local.<br />
 Seguindo do `ports: 80:80` sendo ela a referência da página web do localhost, junto com a montagem do volume site com o diretório /var/www/html.
 
 **2. mysql**
-  -`mysql:`<br />
-    -`image: mysql:8.0`<br />
-    -`environment:`<br />
-    -`  MYSQL_ROOT_PASSWORD: P@ssw0rd!123`<br />
-    -`  MYSQL_DATABASE: mysql`<br />
-    -`  MYSQL_USER: kali`<br />
-    -`  MYSQL_PASSWORD: k@l!`<br />
-    -`ports:`<br />
-    -` - "3306:3306"`<br />
-    -`volumes:`<br />
-    -`  - ./data:/var/lib/mysql`<br />
-    -`networks:`<br />
-    -`  - app-network`<br />
+  `mysql:`<br />
+    `image: mysql:8.0`<br />
+    `environment:`<br />
+    `  MYSQL_ROOT_PASSWORD: P@ssw0rd!123`<br />
+    `  MYSQL_DATABASE: mysql`<br />
+    `  MYSQL_USER: kali`<br />
+    `  MYSQL_PASSWORD: k@l!`<br />
+    `ports:`<br />
+    ` - "3306:3306"`<br />
+    `volumes:`<br />
+    `  - ./data:/var/lib/mysql`<br />
+    `networks:`<br />
+    `  - app-network`<br />
   
 O serviço **mysql** executa a imagem na versão 8.0 do banco de dados.<br />
 O enviroment é uma variavel que constroi o ambiente do banco de dados informando senha, database, usuário e senha de usuário, pré definidos na instalação.<br />
